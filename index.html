@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Health-Based Food Recommendation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section class="hero">
+  <h1>🍽 Smart Nutrition System</h1>
+  <p>Personalized health insights powered by smart logic</p>
+</section>
+
+<div class="glass-card">
+
+  <input type="text" id="name" placeholder="Your Name">
+
+  <div class="row">
+    <input type="number" id="weight" placeholder="Weight (kg)">
+    <input type="number" id="height" placeholder="Height (cm)">
+  </div>
+
+  <div class="row">
+    <select id="goal">
+      <option value="">Goal</option>
+      <option>Weight Loss</option>
+      <option>Muscle Gain</option>
+      <option>Maintain</option>
+    </select>
+
+    <select id="diet">
+      <option value="">Diet</option>
+      <option>Vegetarian</option>
+      <option>Non-Vegetarian</option>
+      <option>Vegan</option>
+      <option>Veg + Non-Veg</option>
+    </select>
+  </div>
+
+  <!-- IMAGE UPLOAD -->
+  <input type="file" id="imageUpload">
+
+  <button onclick="generatePlan()">🔍 Analyze My Health</button>
+
+</div>
+
+<!-- LOADING -->
+<div id="loader" class="loader hidden"></div>
+
+<!-- OUTPUT -->
+<div id="summary" class="summary"></div>
+<div id="bmiBox" class="bmi-box"></div>
+<div id="results" class="results"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
